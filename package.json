@@ -1,0 +1,26 @@
+{
+  "name": "campus-market",
+  "version": "1.0.0",
+  "description": "a mobile-first marketplace connecting university students, faculty, and local vendors",
+  "scripts": {
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keem-sys/campus-market.git"
+  },
+  "keywords": [],
+  "author": "Campus Market Development Team",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/keem-sys/campus-market/issues"
+  },
+  "homepage": "https://github.com/keem-sys/campus-market#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
