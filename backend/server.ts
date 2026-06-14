@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import {supabase} from "./supabaseClient";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,9 +23,20 @@ app.use(cors({
 
 app.use(express.json());
 
-app.get('/api/test', (req: Request, res: Response) => {
-    res.json({ message: "Welcome to the Campus Market API (TypeScript version)!" });
-});
+app.get('/api/products', async (req: Request, res: Response) => {
+    try {
+        const {data, error } = await supabase.from('products').select('*');
+
+        if (error) {
+            return res.status(500).json({ error: error.message });
+        }
+
+        res.json(data);
+    } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+        res.status(500).json({ error: errorMessage });
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`[server]: Server is running on http://localhost:${PORT}`);
