@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/keem-sys/campus-market#readme",
   "devDependencies": {
+    "@types/ws": "^8.18.1",
     "concurrently": "^10.0.3"
+  },
+  "dependencies": {
+    "ws": "^8.21.0"
   }
 }
