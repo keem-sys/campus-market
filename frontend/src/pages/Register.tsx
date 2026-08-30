@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { supabase } from '../supabase';
 import { useNavigate, Link } from 'react-router-dom';
-import registrationIllustration from '../assets/registration_illustration.png';
+import registrationIllustration from '../assets/registration_illustration.webp';
 
 interface RegisterInputs {
     name: string;
@@ -81,6 +81,9 @@ export default function Register() {
                         <img
                             src={registrationIllustration}
                             alt="Registration Illustration"
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="sync"
                             className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
@@ -96,8 +99,24 @@ export default function Register() {
             </div>
 
             {/* RIGHT SIDE: The Form */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 sm:p-12">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 sm:p-12 relative">
                 <div className="w-full max-w-md">
+
+                    <Link
+                        to="/products"
+                        className="inline-flex items-center gap-2 text-xs font-bold text-muted hover:text-primary mb-8 transition-colors group"
+                    >
+                        <svg
+                            className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2.5}
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to Marketplace
+                    </Link>
 
                     <div className="mb-8">
                         <h2 className="text-3xl font-extrabold text-primary mb-2">Create Account</h2>

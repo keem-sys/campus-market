@@ -4,7 +4,7 @@ import { supabase } from '../supabase';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore';
 
-import loginIllustration from '../assets/registration_illustration.png';
+import loginIllustration from '../assets/registration_illustration.webp';
 
 interface LoginInputs {
     email: string;
@@ -49,16 +49,19 @@ export default function Login() {
     return (
         <div className="min-h-screen flex bg-app">
 
-            {/* LEFT SIDE: Brand & Illustration (Matches Registration) */}
+            {/* LEFT SIDE: Brand & Illustration */}
             <div className="hidden lg:flex lg:w-1/2 bg-brand-primary flex-col justify-center items-center p-12 relative overflow-hidden">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
                 <div className="absolute bottom-20 right-10 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl"></div>
 
                 <div className="relative z-10 flex flex-col justify-center items-center text-center">
-                    <div className="w-full max-w-sm aspect-[4/5] bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
+                    <div className="w-full max-w-sm aspect-4/5 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
                         <img
                             src={loginIllustration}
                             alt="Login Illustration"
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="sync"
                             className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
@@ -73,8 +76,25 @@ export default function Login() {
             </div>
 
             {/* RIGHT SIDE: The Form */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 sm:p-12">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 sm:p-12 relative">
                 <div className="w-full max-w-md">
+
+                    <Link
+                        to="/products"
+                        className="inline-flex items-center gap-2 text-xs font-bold text-muted hover:text-primary mb-8 transition-colors group"
+                    >
+                        <svg
+                            className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2.5}
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to Marketplace
+                    </Link>
+
 
                     <div className="mb-8">
                         <h2 className="text-3xl font-extrabold text-primary mb-2">Sign In</h2>
@@ -109,9 +129,13 @@ export default function Login() {
                             <div className="flex justify-between items-center mb-1.5">
                                 <label className="block text-xs font-bold text-primary">Password</label>
                                 {/* Pro-UX touch: Forgot Password link */}
-                                <a href="#" className="text-xs font-bold text-brand-primary hover:underline hover:text-brand-accent transition-colors">
+                                <button
+                                    type="button"
+                                    onClick={() => alert("Password reset functionality will be available in the next release.")}
+                                    className="text-xs font-bold text-brand-primary hover:underline hover:text-brand-accent transition-colors"
+                                >
                                     Forgot password?
-                                </a>
+                                </button>
                             </div>
                             <input
                                 type="password"
