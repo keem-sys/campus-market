@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/keem-sys/campus-market#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^26.4.0",
     "concurrently": "^10.0.3"
   }
 }
