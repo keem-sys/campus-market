@@ -65,8 +65,7 @@ try{
 
     res.status(201).json(data[0]);
 } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occured';
-    res.status(500).json({ error: errorMessage });
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
 }
 });
 
