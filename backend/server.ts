@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://cput-campus-market.vercel.app'
+    'https://cput-campus-market.vercel.app',
+    'https://campus-market-git-ebenk-keem-sys-projects.vercel.app/'
 ];
 
 app.use(cors({
@@ -76,7 +77,7 @@ app.post('/api/transactions', requireAuth, async (req: AuthenticatedRequest, res
     try {
         const buyerId = req.user.id;
         const { items, total_amount, payment_method } = req.body;
-
+        console.log(`[Escrow Gateway]: Buyer ${buyerId} processed R${total_amount} via ${payment_method}`);
         const transactionRows = items.map((item: any) => ({
             product_id: item.product_id,
             buyer_id: buyerId,
@@ -106,6 +107,7 @@ app.post('/api/products', requireAuth, async (req: AuthenticatedRequest, res: Re
                 description,
                 price,
                 image_url,
+                category: category,
                 status: 'active'
             }])
             .select()
