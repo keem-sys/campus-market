@@ -36,11 +36,11 @@ const MOCK_PRODUCTS: Product[] = [
     },
     {
         id: 'prod-3',
-        title: 'CPUT Lab Coat (Size Medium)',
-        description: 'Clean white laboratory coat required for Chemistry and Biology practicals.',
+        title: 'T Shirt (Size Medium)',
+        description: 'Clean white T Shirt for Chemistry and Biology practicals.',
         price: 150.00,
         category: 'Clothing',
-        image_url: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=60',
+        image_url: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=60',
         status: 'active',
         seller_name: 'David K.'
     },
@@ -73,6 +73,66 @@ const MOCK_PRODUCTS: Product[] = [
         image_url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=60',
         status: 'active',
         seller_name: 'Jayden R.'
+    },
+    {
+        id: 'prod-7',
+        title: 'Economics 1A Prescribed Textbook (Latest Edition)',
+        description: 'Current CPUT reading list copy with clean pages and no highlights. Includes transparent cover.',
+        price: 390.00,
+        category: 'Textbooks',
+        image_url: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Zanele P.'
+    },
+    {
+        id: 'prod-8',
+        title: 'Project Management 3 Prescribed Book + Summary Pack',
+        description: 'Prescribed PRM text with chapter summaries and assignment tips, ideal for semester planning.',
+        price: 310.00,
+        category: 'Stationery',
+        image_url: 'https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Nomsa L.'
+    },
+    {
+        id: 'prod-9',
+        title: 'Hoodie (Orange, Large)',
+        description: 'Official orange hoodie in excellent condition. Warm and perfect for winter mornings.',
+        price: 280.00,
+        category: 'Clothing',
+        image_url: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Liam S.'
+    },
+    {
+        id: 'prod-10',
+        title: 'Residence Starter Bundle (Kettle + Storage Crates)',
+        description: 'Reliable dorm essentials for first-years moving into Bellville and District Six residences.',
+        price: 680.00,
+        category: 'Dorm Gear',
+        image_url: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Ayanda G.'
+    },
+    {
+        id: 'prod-11',
+        title: 'HP Laptop Backpack (Water Resistant)',
+        description: 'Fits up to 15.6" laptop, with padded straps and extra compartments.',
+        price: 240.00,
+        category: 'Dorm Gear',
+        image_url: 'https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Mpho D.'
+    },
+    {
+        id: 'prod-12',
+        title: 'Civil Engineering Drawing Instrument Kit',
+        description: 'Set square, compass, adjustable ruler, and mechanical pencils used for 1st-year engineering modules.',
+        price: 360.00,
+        category: 'Stationery',
+        image_url: 'https://images.unsplash.com/photo-1581092921461-eab10380dca8?w=600&auto=format&fit=crop&q=60',
+        status: 'active',
+        seller_name: 'Karen V.'
     }
 ];
 
