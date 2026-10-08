@@ -62,6 +62,56 @@ const MOCK_POSTS: BulletinPost[] = [
         author_role: 'student',
         created_at: new Date().toISOString(),
         expires_at: new Date(Date.now() + 8 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+        id: 'post-5',
+        title: 'Safe Trade Point Update: Library Foyer Pickup Zone',
+        content: 'For student-to-student sales, Security confirms the Main Library foyer as a monitored daytime meetup point. Avoid off-campus cash handovers where possible.',
+        type: 'announcement',
+        author_name: 'Campus Safety Office',
+        author_role: 'faculty',
+        created_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 12 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+        id: 'post-6',
+        title: 'Affordable Graphing Calculator Repairs (Student Discount)',
+        content: 'Verified Bellville vendor offers same-day checks for Casio/TI calculators used in Maths and Engineering modules. Bring student card for discounted labour.',
+        type: 'service',
+        author_name: 'TechFix Bellville',
+        author_role: 'faculty',
+        created_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+        id: 'post-7',
+        title: 'District Six Bookstore: Prescribed Textbook Clearance',
+        content: 'Partner vendor near District Six campus is running a week-long discount on Economics and Project Management prescribed titles for registered students.',
+        type: 'service',
+        author_name: 'CampusBooks D6',
+        author_role: 'faculty',
+        created_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+        id: 'post-8',
+        title: 'Scam Alert: Verify Seller Identity Before Payment',
+        content: 'Student Affairs reminds buyers to confirm profile identity and item details before making EFT payments. Report suspicious listings immediately for review.',
+        type: 'announcement',
+        author_name: 'Student Affairs',
+        author_role: 'faculty',
+        created_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString()
+    },
+    {
+        id: 'post-9',
+        title: 'Engineering Society Bulk Buy: Drawing Instruments',
+        content: 'Group order opened for first-year engineering kits (set squares, compasses, mechanical pencils) at reduced pricing. Collection on campus only.',
+        type: 'club_promo',
+        author_name: 'Engineering Student Society',
+        author_role: 'student',
+        created_at: new Date().toISOString(),
+        expires_at: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000).toISOString()
     }
 ];
 
