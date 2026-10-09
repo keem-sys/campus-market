@@ -148,7 +148,6 @@ export default function Marketplace() {
     const [loading, setLoading] = useState(false);
     const [addedId, setAddedId] = useState<string | null>(null);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-    const [showingDemoProducts, setShowingDemoProducts] = useState(true);
 
     const addToCart = useCartStore((state) => state.addToCart);
 
@@ -160,7 +159,6 @@ export default function Marketplace() {
                 const res = await axios.get(`${apiUrl}/api/products`);
                 if (res.data && res.data.length > 0) {
                     setProducts(res.data);
-                    setShowingDemoProducts(false);
                 }
             } catch (err) {
                 console.warn('Backend API unavailable or empty. Using local mock dataset.');
@@ -307,11 +305,6 @@ export default function Marketplace() {
             ) : (
                 /* Responsive Grid */
                 <>
-                {showingDemoProducts && (
-                    <p className="text-xs text-muted mb-4">
-                        Demo listings with illustrative images, not actual seller photos. Live listings use sellers&apos; own images.
-                    </p>
-                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {filteredProducts.map((product) => (
                         <div
