@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#faefdc"/>
+  <circle cx="458" cy="104" r="64" fill="#f0dfb9"/>
+  <ellipse cx="302" cy="347" rx="163" ry="16" fill="#e8d0aa"/>
+  <path d="M251 109q-9-75 49-75t49 75l41 20 63 164-50 22-45-110 9 126H233l9-126-45 110-50-22 63-164Z" fill="#d47746" stroke="#b65c32" stroke-width="3"/>
+  <path d="M251 109q49 45 98 0-49-43-98 0Z" fill="#a94e2c"/>
+  <path d="m285 131-3 62m34-62 3 62" stroke="#fffaf0" stroke-width="4" stroke-linecap="round"/>
+  <path d="m258 239-13 54h110l-13-54Z" fill="#b65c32"/>
+  <path d="M234 319h132" stroke="#f3aa73" stroke-width="8"/>
+  <text x="300" y="223" text-anchor="middle" fill="#fffaf0" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3">CAMPUS</text>
+</svg>

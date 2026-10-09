@@ -4,7 +4,7 @@ import { supabase } from '../supabase';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore';
 
-import loginIllustration from '../assets/registration_illustration.webp';
+import loginIllustration from '../assets/campus/trading.svg';
 
 interface LoginInputs {
     email: string;
@@ -55,14 +55,14 @@ export default function Login() {
                 <div className="absolute bottom-20 right-10 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl"></div>
 
                 <div className="relative z-10 flex flex-col justify-center items-center text-center">
-                    <div className="w-full max-w-sm aspect-4/5 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
+                    <div className="w-full max-w-lg aspect-4/3 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
                         <img
                             src={loginIllustration}
-                            alt="Login Illustration"
+                            alt="Two students exchanging a course book on campus beside a local printing stall"
                             loading="eager"
                             fetchPriority="high"
                             decoding="sync"
-                            className="w-full h-full object-cover rounded-2xl"
+                            className="w-full h-full object-contain rounded-2xl"
                         />
                     </div>
 
@@ -70,7 +70,7 @@ export default function Login() {
                         Welcome back
                     </h1>
                     <p className="text-slate-300 text-sm max-w-xs font-medium leading-relaxed">
-                        Sign in to buy
+                        Sign in to trade with verified CPUT students and local campus vendors.
                     </p>
                 </div>
             </div>

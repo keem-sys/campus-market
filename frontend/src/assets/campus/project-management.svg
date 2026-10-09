@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#faf0df"/>
+  <circle cx="450" cy="91" r="67" fill="#f0debd"/>
+  <ellipse cx="300" cy="345" rx="165" ry="16" fill="#e4d1ad"/>
+  <g transform="rotate(-6 274 195)">
+    <rect x="162" y="49" width="210" height="281" rx="10" fill="#28756b"/>
+    <path d="M182 62v253" stroke="#80b6a4" stroke-width="4"/>
+    <text x="203" y="101" fill="#fffaf0" font-family="Arial,sans-serif" font-size="20" font-weight="700">PROJECT</text>
+    <text x="203" y="129" fill="#fffaf0" font-family="Arial,sans-serif" font-size="20" font-weight="700">MANAGEMENT</text>
+    <text x="203" y="155" fill="#f9c65d" font-family="Arial,sans-serif" font-size="14">PLAN. BUILD. DELIVER.</text>
+    <path d="M210 203h43v24h-43Zm59 25h43v24h-43Zm-34 49h61v24h-61Z" fill="#f9c65d"/>
+    <path d="m253 215 38 13m0 24-25 25" stroke="#fffaf0" stroke-width="3"/>
+    <path d="M185 317h177" stroke="#fffaf0" stroke-width="12"/>
+  </g>
+  <g transform="rotate(8 393 259)">
+    <rect x="342" y="204" width="101" height="132" rx="5" fill="#fffaf0" stroke="#c9b898" stroke-width="2"/>
+    <text x="359" y="234" fill="#0c3550" font-family="Arial,sans-serif" font-size="12" font-weight="700">SUMMARIES</text>
+    <path d="M359 253h67m-67 17h56m-56 17h67m-67 17h47" stroke="#9cbdb8" stroke-width="3"/>
+  </g>
+</svg>

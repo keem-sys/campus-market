@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f8ecdf"/>
+  <circle cx="133" cy="105" r="60" fill="#efd8bf"/>
+  <ellipse cx="310" cy="343" rx="188" ry="17" fill="#dec6ac"/>
+  <g transform="rotate(-8 245 194)">
+    <rect x="160" y="72" width="180" height="248" rx="7" fill="#fffaf0" stroke="#c9b898" stroke-width="3"/>
+    <path d="M186 73v246" stroke="#d47746" stroke-width="2"/>
+    <path d="M203 153h114m-114 25h114m-114 25h114m-114 25h114m-114 25h114m-114 25h80" stroke="#b7d3c7" stroke-width="2"/>
+    <text x="205" y="115" fill="#0c3550" font-family="Arial,sans-serif" font-size="15" font-weight="700">STUDY NOTES</text>
+    <text x="205" y="138" fill="#28756b" font-family="monospace" font-size="12">learn. reuse. share.</text>
+  </g>
+  <path d="M334 130 467 305H334Zm26 77v72h55Z" fill="#f9c65d" fill-rule="evenodd" stroke="#c99148" stroke-width="3"/>
+  <g transform="rotate(15 437 177)">
+    <rect x="429" y="75" width="16" height="213" rx="3" fill="#d47746"/>
+    <path d="m429 288 8 24 8-24" fill="#c99148"/>
+    <path d="m433 301 4 11 4-11" fill="#0c3550"/>
+    <rect x="429" y="75" width="16" height="17" rx="3" fill="#0c3550"/>
+  </g>
+  <path d="m361 68-42 98m42-98 42 98" fill="none" stroke="#0c3550" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="361" cy="68" r="7" fill="#d47746"/>
+</svg>

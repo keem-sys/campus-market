@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useCartStore } from '../store/useCartStore';
+import { campusImages } from '../assets/campus/images';
+import campusTrading from '../assets/campus/trading.svg';
 
 interface Product {
     id: string;
@@ -20,39 +22,39 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Barely used, textbook for 1st & 2nd year Engineering students. No missing pages.',
         price: 350.00,
         category: 'Textbooks',
-        image_url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.textbooks,
         status: 'active',
         seller_name: 'Sipho N.'
     },
     {
         id: 'prod-2',
         title: 'Casio FX-991ZA Plus II Scientific Calculator',
-        description: 'Approved for university tests and exams. Includes slide-on protective case.',
+        description: 'Second-hand scientific calculator with protective case. Check your module requirements before buying.',
         price: 220.00,
         category: 'Electronics',
-        image_url: 'https://images.unsplash.com/photo-1594980596870-8aa52a78d8cd?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.calculator,
         status: 'active',
         seller_name: 'Jessica M.'
     },
     {
         id: 'prod-3',
-        title: 'T Shirt (Size Medium)',
-        description: 'Clean white T Shirt for Chemistry and Biology practicals.',
+        title: 'White Lab Coat (Size Medium)',
+        description: 'Clean second-hand lab coat for Chemistry and Biology practicals. Check the required size and safety specifications.',
         price: 150.00,
         category: 'Clothing',
-        image_url: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.labCoat,
         status: 'active',
         seller_name: 'David K.'
     },
     {
         id: 'prod-4',
-        title: 'Logitech Wireless Mouse M185',
-        description: 'Compact wireless optical mouse with USB nano receiver. Works with Windows/Mac.',
-        price: 120.00,
-        category: 'Electronics',
-        image_url: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop&q=60',
+        title: 'District Six Printing & Binding (per set)',
+        description: 'Affordable printing and binding for lecture notes, assignments, and project submissions near campus.',
+        price: 25.00,
+        category: 'Services',
+        image_url: campusImages.printing,
         status: 'active',
-        seller_name: 'Amanda T.'
+        seller_name: 'District Six Print Hub'
     },
     {
         id: 'prod-5',
@@ -60,7 +62,7 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Comprehensive printed & bound study guides with practice past papers and solutions.',
         price: 80.00,
         category: 'Stationery',
-        image_url: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.stationery,
         status: 'active',
         seller_name: 'Matthew B.'
     },
@@ -70,7 +72,7 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Adjustable LED study lamp with 3 brightness modes. Perfect for late night studying.',
         price: 180.00,
         category: 'Dorm Gear',
-        image_url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.lamp,
         status: 'active',
         seller_name: 'Jayden R.'
     },
@@ -80,7 +82,7 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Current CPUT reading list copy with clean pages and no highlights. Includes transparent cover.',
         price: 390.00,
         category: 'Textbooks',
-        image_url: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.economics,
         status: 'active',
         seller_name: 'Zanele P.'
     },
@@ -89,18 +91,18 @@ const MOCK_PRODUCTS: Product[] = [
         title: 'Project Management 3 Prescribed Book + Summary Pack',
         description: 'Prescribed PRM text with chapter summaries and assignment tips, ideal for semester planning.',
         price: 310.00,
-        category: 'Stationery',
-        image_url: 'https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=600&auto=format&fit=crop&q=60',
+        category: 'Textbooks',
+        image_url: campusImages.projectManagement,
         status: 'active',
         seller_name: 'Nomsa L.'
     },
     {
         id: 'prod-9',
         title: 'Hoodie (Orange, Large)',
-        description: 'Official orange hoodie in excellent condition. Warm and perfect for winter mornings.',
+        description: 'Second-hand orange hoodie in excellent condition for cold early lectures and residence life.',
         price: 280.00,
         category: 'Clothing',
-        image_url: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.hoodie,
         status: 'active',
         seller_name: 'Liam S.'
     },
@@ -110,7 +112,7 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Reliable dorm essentials for first-years moving into Bellville and District Six residences.',
         price: 680.00,
         category: 'Dorm Gear',
-        image_url: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.residence,
         status: 'active',
         seller_name: 'Ayanda G.'
     },
@@ -120,7 +122,7 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Fits up to 15.6" laptop, with padded straps and extra compartments.',
         price: 240.00,
         category: 'Dorm Gear',
-        image_url: 'https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.backpack,
         status: 'active',
         seller_name: 'Mpho D.'
     },
@@ -130,13 +132,13 @@ const MOCK_PRODUCTS: Product[] = [
         description: 'Set square, compass, adjustable ruler, and mechanical pencils used for 1st-year engineering modules.',
         price: 360.00,
         category: 'Stationery',
-        image_url: 'https://images.unsplash.com/photo-1581092921461-eab10380dca8?w=600&auto=format&fit=crop&q=60',
+        image_url: campusImages.engineeringKit,
         status: 'active',
         seller_name: 'Karen V.'
     }
 ];
 
-const CATEGORIES = ['All', 'Textbooks', 'Electronics', 'Clothing', 'Stationery', 'Dorm Gear'];
+const CATEGORIES = ['All', 'Textbooks', 'Electronics', 'Clothing', 'Stationery', 'Dorm Gear', 'Services'];
 
 export default function Marketplace() {
     const [products, setProducts] = useState<Product[]>(MOCK_PRODUCTS);
@@ -146,6 +148,7 @@ export default function Marketplace() {
     const [loading, setLoading] = useState(false);
     const [addedId, setAddedId] = useState<string | null>(null);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+    const [showingDemoProducts, setShowingDemoProducts] = useState(true);
 
     const addToCart = useCartStore((state) => state.addToCart);
 
@@ -157,6 +160,7 @@ export default function Marketplace() {
                 const res = await axios.get(`${apiUrl}/api/products`);
                 if (res.data && res.data.length > 0) {
                     setProducts(res.data);
+                    setShowingDemoProducts(false);
                 }
             } catch (err) {
                 console.warn('Backend API unavailable or empty. Using local mock dataset.');
@@ -196,13 +200,35 @@ export default function Marketplace() {
     return (
         <div className="min-h-screen bg-app py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
+            <section className="mb-8 overflow-hidden rounded-brand bg-brand-primary grid md:grid-cols-2">
+                <div className="p-6 sm:p-8 flex flex-col justify-center text-left">
+                    <p className="text-brand-accent text-xs font-bold uppercase tracking-widest mb-3">Made for campus life</p>
+                    <h2 className="text-white text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-4">
+                        Pass it on.<br />Keep the cost down.
+                    </h2>
+                    <p className="text-slate-200 text-sm leading-relaxed max-w-md">
+                        Give textbooks, calculators, and residence essentials a second life.
+                        Connect with fellow students and small businesses around District Six and Bellville.
+                    </p>
+                    <p className="text-slate-300 text-xs leading-relaxed mt-5">
+                        Campus handovers: choose a busy, public meeting point and inspect the item before accepting it.
+                    </p>
+                </div>
+                <img
+                    src={campusTrading}
+                    alt="Two students exchanging a course book on campus beside a local printing stall"
+                    className="w-full h-auto md:h-full object-contain bg-[#eaf4f1]"
+                    fetchPriority="high"
+                />
+            </section>
+
             {/* 1. Header & Hero Search Bar */}
             <div className="mb-10 text-center sm:text-left">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight mb-2">
                     Campus Marketplace
                 </h1>
                 <p className="text-muted text-sm sm:text-base max-w-2xl">
-                    Discover verified second-hand textbooks, electronics, and dorm essentials from fellow students and local vendors.
+                    Find affordable course essentials and residence gear from verified campus sellers, or discover services from nearby vendors.
                 </p>
 
                 {/* Search & Sort Row */}
@@ -280,6 +306,12 @@ export default function Marketplace() {
                 </div>
             ) : (
                 /* Responsive Grid */
+                <>
+                {showingDemoProducts && (
+                    <p className="text-xs text-muted mb-4">
+                        Demo listings with illustrative images, not actual seller photos. Live listings use sellers&apos; own images.
+                    </p>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {filteredProducts.map((product) => (
                         <div
@@ -293,7 +325,9 @@ export default function Marketplace() {
                                     src={product.image_url}
                                     alt={product.title}
                                     onError={(e) => {
-                                        e.currentTarget.src = 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=60';
+                                        if (e.currentTarget.src !== new URL(campusImages.unavailable, window.location.origin).href) {
+                                            e.currentTarget.src = campusImages.unavailable;
+                                        }
                                     }}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
@@ -357,6 +391,7 @@ export default function Marketplace() {
                         </div>
                     ))}
                 </div>
+                </>
             )}
             {/* PRODUCT DETAIL MODAL */}
             {selectedProduct && (
@@ -379,6 +414,11 @@ export default function Marketplace() {
                             <img
                                 src={selectedProduct.image_url}
                                 alt={selectedProduct.title}
+                                onError={(e) => {
+                                    if (e.currentTarget.src !== new URL(campusImages.unavailable, window.location.origin).href) {
+                                        e.currentTarget.src = campusImages.unavailable;
+                                    }
+                                }}
                                 className="w-full h-full object-cover"
                             />
                             <span className="absolute bottom-3 left-3 px-3 py-1 bg-brand-primary/90 text-white text-xs font-bold uppercase tracking-wider rounded-md">
