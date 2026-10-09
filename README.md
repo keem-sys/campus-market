@@ -25,6 +25,16 @@ CampusMarket helps the CPUT community:
 - Transaction creation with escrow-style status flow (`/api/transactions`)
 - Mobile-first frontend UI
 
+### Marketplace imagery
+
+Original local SVG illustrations in `frontend/src/assets/campus` show student
+book exchanges, scientific calculators, lab coats, drawing tools, printing,
+and residence essentials. The marketplace banner and authentication screens
+use the campus trading scene. Demo listings and listing-form presets use
+illustrations; live listings retain sellers' images. For real listings, use a
+photo of the actual item. Failed images display a neutral "Photo unavailable"
+placeholder rather than a photo of an unrelated product.
+
 ## Tech stack
 
 - **Frontend:** React + TypeScript + Vite + Tailwind CSS

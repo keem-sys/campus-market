@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore';
 import axios from 'axios';
+import { campusImages } from '../assets/campus/images';
 
 interface CreateListingInputs {
     title: string;
@@ -13,10 +14,12 @@ interface CreateListingInputs {
 }
 
 const SAMPLE_IMAGES = [
-    { label: '📚 Textbook', url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=60' },
-    { label: '💻 Tech / Calc', url: 'https://images.unsplash.com/photo-1594980596870-8aa52a78d8cd?w=600&auto=format&fit=crop&q=60' },
-    { label: '🥼 Lab Gear', url: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=60' },
-    { label: '🛋️ Dorm Item', url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=60' },
+    { label: '📚 Prescribed Textbook', url: campusImages.textbooks },
+    { label: '🧮 Calculator', url: campusImages.calculator },
+    { label: '🥼 Lab Gear', url: campusImages.labCoat },
+    { label: '🛠️ Engineering Kit', url: campusImages.engineeringKit },
+    { label: '🛋️ Residence Essential', url: campusImages.residence },
+    { label: '🖨️ Campus Service', url: campusImages.printing },
 ];
 
 export default function CreateListing() {
@@ -31,7 +34,7 @@ export default function CreateListing() {
     const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<CreateListingInputs>({
         defaultValues: {
             category: 'Textbooks',
-            image_url: SAMPLE_IMAGES[0].url,
+            image_url: new URL(SAMPLE_IMAGES[0].url, window.location.origin).href,
         }
     });
 
@@ -165,7 +168,7 @@ export default function CreateListing() {
                                     <button
                                         key={sample.label}
                                         type="button"
-                                        onClick={() => setValue('image_url', sample.url)}
+                                        onClick={() => setValue('image_url', new URL(sample.url, window.location.origin).href)}
                                         className="text-[11px] font-bold bg-app hover:bg-brand-primary/10 text-primary border border-ui-border px-2.5 py-1 rounded-md transition-colors whitespace-nowrap"
                                     >
                                         {sample.label}
@@ -179,6 +182,9 @@ export default function CreateListing() {
                                 {...register('image_url', { required: 'Image URL is required' })}
                                 className="w-full px-4 py-2.5 border border-ui-border rounded-brand bg-app text-primary focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm"
                             />
+                            <p className="text-[11px] text-muted mt-2">
+                                Presets are illustrations for demos. For a real listing, use a photo of your actual item.
+                            </p>
                             {errors.image_url && <p className="text-xs text-red-500 mt-1 font-medium">{errors.image_url.message}</p>}
                         </div>
 
@@ -227,7 +233,9 @@ export default function CreateListing() {
                                 src={watchedImageUrl}
                                 alt="Preview"
                                 onError={(e) => {
-                                    e.currentTarget.src = SAMPLE_IMAGES[0].url;
+                                    if (e.currentTarget.src !== new URL(campusImages.unavailable, window.location.origin).href) {
+                                        e.currentTarget.src = campusImages.unavailable;
+                                    }
                                 }}
                                 className="w-full h-full object-cover"
                             />

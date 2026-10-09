@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#faf0df"/>
+  <circle cx="455" cy="105" r="71" fill="#f0debd"/>
+  <ellipse cx="305" cy="338" rx="190" ry="17" fill="#e4d1ad"/>
+  <rect x="208" y="61" width="166" height="113" rx="4" fill="#fffaf0" stroke="#c9b898" stroke-width="3"/>
+  <path d="M235 90h112m-112 18h93m-93 18h105" stroke="#0c3550" stroke-width="4"/>
+  <rect x="141" y="149" width="297" height="135" rx="20" fill="#0c3550"/>
+  <rect x="164" y="170" width="251" height="44" rx="9" fill="#244b63"/>
+  <circle cx="391" cy="191" r="7" fill="#f9c65d"/>
+  <rect x="191" y="230" width="198" height="69" rx="8" fill="#183c49"/>
+  <path d="M210 250h161v76H210Z" fill="#fffaf0" stroke="#c9b898" stroke-width="2"/>
+  <path d="M232 270h115m-115 16h87m-87 16h102" stroke="#9cbdb8" stroke-width="4"/>
+  <g transform="rotate(9 448 291)">
+    <rect x="416" y="246" width="70" height="89" rx="5" fill="#28756b"/>
+    <path d="M428 246v89" stroke="#fffaf0" stroke-width="3" stroke-dasharray="4 6"/>
+    <text x="456" y="283" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="11" font-weight="700">BOUND</text>
+    <text x="456" y="300" text-anchor="middle" fill="#f9c65d" font-family="Arial,sans-serif" font-size="11" font-weight="700">NOTES</text>
+  </g>
+</svg>

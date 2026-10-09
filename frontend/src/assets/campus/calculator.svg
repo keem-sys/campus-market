@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#e8eff5"/>
+  <path d="M70 310h460M95 80l38 38m0-38-38 38m388 17v39m-20-20h40" stroke="#cadbe6" stroke-width="5"/>
+  <ellipse cx="300" cy="350" rx="112" ry="14" fill="#c3d4df"/>
+  <g transform="rotate(-7 300 200)">
+    <rect x="211" y="44" width="178" height="302" rx="22" fill="#0c3550"/>
+    <rect x="222" y="55" width="156" height="279" rx="15" fill="#244b63"/>
+    <text x="300" y="80" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="12" font-weight="700">SCIENTIFIC</text>
+    <rect x="236" y="93" width="128" height="60" rx="7" fill="#c0d6bf"/>
+    <text x="350" y="131" text-anchor="end" fill="#254536" font-family="monospace" font-size="28">123.45</text>
+    <g fill="#7b9ba9">
+      <rect x="236" y="171" width="25" height="19" rx="5"/><rect x="270" y="171" width="25" height="19" rx="5"/><rect x="304" y="171" width="25" height="19" rx="5"/><rect x="338" y="171" width="25" height="19" rx="5"/>
+      <rect x="236" y="199" width="25" height="19" rx="5"/><rect x="270" y="199" width="25" height="19" rx="5"/><rect x="304" y="199" width="25" height="19" rx="5"/><rect x="338" y="199" width="25" height="19" rx="5"/>
+    </g>
+    <g fill="#fffaf0">
+      <rect x="236" y="231" width="25" height="22" rx="5"/><rect x="270" y="231" width="25" height="22" rx="5"/><rect x="304" y="231" width="25" height="22" rx="5"/>
+      <rect x="236" y="261" width="25" height="22" rx="5"/><rect x="270" y="261" width="25" height="22" rx="5"/><rect x="304" y="261" width="25" height="22" rx="5"/>
+      <rect x="236" y="291" width="25" height="22" rx="5"/><rect x="270" y="291" width="25" height="22" rx="5"/><rect x="304" y="291" width="25" height="22" rx="5"/>
+    </g>
+    <rect x="338" y="231" width="25" height="52" rx="5" fill="#d47746"/>
+    <rect x="338" y="291" width="25" height="22" rx="5" fill="#f9c65d"/>
+    <text x="350" y="307" text-anchor="middle" fill="#0c3550" font-family="Arial,sans-serif" font-size="15">=</text>
+  </g>
+</svg>

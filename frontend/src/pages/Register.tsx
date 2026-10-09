@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { supabase } from '../supabase';
 import { useNavigate, Link } from 'react-router-dom';
-import registrationIllustration from '../assets/registration_illustration.webp';
+import registrationIllustration from '../assets/campus/trading.svg';
 
 interface RegisterInputs {
     name: string;
@@ -77,14 +77,14 @@ export default function Register() {
 
                 <div className="relative z-10 flex flex-col justify-center items-center text-center">
 
-                    <div className="w-full max-w-sm aspect-4/5 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
+                    <div className="w-full max-w-lg aspect-4/3 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm overflow-hidden">
                         <img
                             src={registrationIllustration}
-                            alt="Registration Illustration"
+                            alt="Two students exchanging a course book on campus beside a local printing stall"
                             loading="eager"
                             fetchPriority="high"
                             decoding="sync"
-                            className="w-full h-full object-cover rounded-2xl"
+                            className="w-full h-full object-contain rounded-2xl"
                         />
                     </div>
 
@@ -93,7 +93,7 @@ export default function Register() {
                     </h1>
 
                     <p className="text-slate-300 text-sm max-w-xs font-medium leading-relaxed">
-                        The trusted marketplace built exclusively for you
+                        Find affordable course essentials and connect with trusted campus sellers.
                     </p>
                 </div>
             </div>
